@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function hasPosts()
+    {
+        return $this->hasMany(Todo::class);
+    }
 }
